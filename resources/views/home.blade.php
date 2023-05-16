@@ -6,7 +6,7 @@
 
 @section('main-content')
 
-    <h1 class="text-center">HOME lista dc comics</h1>
+    <h1 class="text-center text-white ">HOME lista dc comics</h1>
 
 
 @endsection

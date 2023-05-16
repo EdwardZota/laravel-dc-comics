@@ -11,10 +11,12 @@
 
 @section('main-content')
 
-    <div class="container">
+    <div class="container text-white my-5">
         <div class="row w-50">
-            @if (file_exists($comic->thumb))
+            @if (isset($comic->thumb))
+            <div>
                 <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
+            </div>
             @else
                 <img src="{{Vite::asset('resources/image/image_not_available.png')}}" alt="not available">
             @endif
