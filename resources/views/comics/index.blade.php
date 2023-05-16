@@ -5,13 +5,15 @@
 
 
 @section('main-content')
-
-    <h1>lista fumetti</h1>
+    <div class="text-center mb-4 text-white ">
+        <h1>lista fumetti</h1>
+        <a href="{{route('comics.create')}}" class="btn btn-primary">Aggiungi fumetto</a>
+    </div>
     <div class="container">
-        <div class="row d-flex justify-content-between">
+        <div class="row d-flex justify-content-around">
             @foreach ($comics as $comic)
-                <div class="card mb-4" style="width: 18rem;">
-                    @if (file_exists($comic->thumb))
+                <div class="card mb-4 p-0" style="width: 18rem;">
+                    @if (isset($comic->thumb))
                         <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
                     @else
                         <img src="{{Vite::asset('resources/image/image_not_available.png')}}" alt="not available">

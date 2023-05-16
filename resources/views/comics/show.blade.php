@@ -2,7 +2,11 @@
 @extends('layouts.layoutBase')
 
 
-@section('page-title','Dc Comics')
+@section('page-title')
+
+    Dc:Comics {{$comic->title}}
+
+@endsection
 
 
 @section('main-content')
