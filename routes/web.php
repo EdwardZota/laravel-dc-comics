@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+use App\Http\Controllers\Guest\TrashController;
+
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\ComicController;
 
@@ -19,5 +22,7 @@ use App\Http\Controllers\ComicController;
 */
 
 Route::get('/',[PageController::class,'index'])->name('home');
+
+Route::get('/trash',[TrashController::class,'trash'])->name('trash_comics');
 
 Route::resource('comics', ComicController::class);

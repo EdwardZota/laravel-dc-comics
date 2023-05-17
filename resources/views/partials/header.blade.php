@@ -10,6 +10,9 @@
               <li class="nav-item">
                 <a class="nav-link active text-white " aria-current="page" href="{{route('comics.index')}}">Lista fumetti</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white " aria-current="page" href="{{route('trash_comics')}}">Cestino</a>
+              </li>
             </ul>
           </div>
         </div>
