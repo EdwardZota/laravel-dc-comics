@@ -24,11 +24,11 @@
                         <div class="d-flex ">
                             <a href="{{route('comics.show',['comic' => $comic->id])}}" class="btn btn-success">Dettagli</a>
                             <a href="{{route('comics.edit',['comic' => $comic->id])}}" class="btn btn-warning mx-2">Modifica</a>
-                            <form action="{{route('comics.destroy',['comic'=>$comic->id])}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-danger">Elimina</button>
-                            </form>
+                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$comic->id}}">
+                                Elimina
+                              </button>
+                            @include('partials.modal')
                         </div>
                     </div>
                 </div>
