@@ -22,8 +22,7 @@
                         <p class="card-text">Serie:{{$trash->series}}</p>
                         <div class="d-flex ">
                             <a href="{{route('comics.show',['comic' => $trash->id])}}" class="btn btn-success">Dettagli</a>
-                            <a href="{{route('comics.edit',['comic' => $trash->id])}}" class="btn btn-warning mx-2">Modifica</a>
-                            
+
                         </div>
                     </div>
                 </div>
