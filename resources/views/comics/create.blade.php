@@ -43,9 +43,15 @@
                     <label for="price" class="form-label">Prezzo:</label>
                     <input type="number" step=".01" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="{{old('price')}}">
                     @error('price')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
+                        @if (true)
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @else
+                            <div class="valid-feedback">
+                                Dato inserito accettabile!
+                          </div>
+                        @endif
                     @enderror
                 </div>
                 <div class="mb-3">

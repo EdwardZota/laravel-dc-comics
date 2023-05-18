@@ -67,7 +67,7 @@ class ComicController extends Controller
 
         $newComic->save();
 
-        return redirect()->route('comics.show',['comic' => $newComic->id]);
+        return redirect()->route('comics.show',['comic' => $newComic->id])->with('status-positive', 'Hai creato correttamente il fumetto!');
     }
 
     /**
@@ -116,7 +116,7 @@ class ComicController extends Controller
         $data = $request->all();
         $comic->update($data);
 
-        return redirect()->route('comics.show',['comic' => $comic->id]);
+        return redirect()->route('comics.show',['comic' => $comic->id])->with('status-positive', 'Hai aggiornato correttamente il fumetto!');
 
 
     }
@@ -131,6 +131,6 @@ class ComicController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('status-negative', 'Hai cestinato il fumetto!');
     }
 }

@@ -5,6 +5,13 @@
 
 
 @section('main-content')
+
+    @if (session('status-negative'))
+        <div class="alert alert-warning">
+            {{ session('status-negative') }}
+        </div>
+    @endif
+
     <div class="text-center mb-4 text-white ">
         <h1>lista fumetti</h1>
         <a href="{{route('comics.create')}}" class="btn btn-primary">Aggiungi fumetto</a>
@@ -24,7 +31,7 @@
                         <div class="d-flex ">
                             <a href="{{route('comics.show',['comic' => $comic->id])}}" class="btn btn-success">Dettagli</a>
                             <a href="{{route('comics.edit',['comic' => $comic->id])}}" class="btn btn-warning mx-2">Modifica</a>
-                            
+
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$comic->id}}">
                                 Elimina
                               </button>

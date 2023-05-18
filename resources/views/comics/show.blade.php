@@ -11,6 +11,12 @@
 
 @section('main-content')
 
+    @if (session('status-positive'))
+        <div class="alert alert-success">
+            {{ session('status-positive') }}
+        </div>
+    @endif
+
     <div class="container text-white my-5">
         <div class="row w-50">
             @if (isset($comic->thumb))
