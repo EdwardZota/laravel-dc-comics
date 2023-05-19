@@ -37,7 +37,7 @@ return [
     'date' => 'The :attribute is not a valid date.',
     'date_equals' => 'The :attribute must be a date equal to :date.',
     'date_format' => 'The :attribute does not match the format :format.',
-    'decimal' => 'L :attribute deve avere :decimal cifre decimali.',
+    'decimal' => 'The :attribute must have :decimal decimal places.',
     'declined' => 'The :attribute must be declined.',
     'declined_if' => 'The :attribute must be declined when :other is :value.',
     'different' => 'The :attribute and :other must be different.',
@@ -88,10 +88,10 @@ return [
     ],
     'mac_address' => 'The :attribute must be a valid MAC address.',
     'max' => [
-        'array' => 'L\' :attribute non deve avere più di :max elementi.',
-        'file' => 'L :attribute non deve essere maggiore di :max kilobyte.',
-        'numeric' => 'L\' :attribute non deve essere maggiore di :max.',
-        'string' => 'L\' :attribute non deve essere maggiore di :max caratteri.',
+        'array' => 'The :attribute must not have more than :max items.',
+        'file' => 'The :attribute must not be greater than :max kilobytes.',
+        'numeric' => 'The :attribute must not be greater than :max.',
+        'string' => 'The :attribute must not be greater than :max characters.',
     ],
     'max_digits' => 'The :attribute must not have more than :max digits.',
     'mimes' => 'The :attribute must be a file of type: :values.',
@@ -111,7 +111,7 @@ return [
     'multiple_of' => 'The :attribute must be a multiple of :value.',
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',
-    'numeric' => 'L :attribute deve essere un numero.',
+    'numeric' => 'The :attribute must be a number.',
     'password' => [
         'letters' => 'The :attribute must contain at least one letter.',
         'mixed' => 'The :attribute must contain at least one uppercase and one lowercase letter.',
@@ -125,7 +125,7 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'Il campo :attribute è obbligatorio.',
+    'required' => 'The :attribute field is required.',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_if_accepted' => 'The :attribute field is required when :other is accepted.',
@@ -165,16 +165,6 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
-            'required' => 'Il campo :attribute è obbligatorio.',
-            'max' => [
-                'array' => 'L\' :attribute non deve avere più di :max elementi.',
-                'file' => 'L :attribute non deve essere maggiore di :max kilobyte.',
-                'numeric' => 'L\' :attribute non deve essere maggiore di :max.',
-                'string' => 'L\' :attribute non deve essere maggiore di :max caratteri.',
-            ],
-
-            'numeric' => 'L :attribute deve essere un numero.',
-            'decimal' => 'L :attribute deve avere :decimal cifre decimali.',
         ],
     ],
 
@@ -189,13 +179,6 @@ return [
     |
     */
 
-    'attributes' => [
-        'title'                 => 'titolo',
-        'description'           => 'descrizione',
-        'thumb'                 => 'link',
-        'price'                 => 'prezzo',
-        'series'                => 'serie',
-        'sale_date'             => 'data di rilascio',
-        'type'                  => 'tipo',],
+    'attributes' => [],
 
 ];
